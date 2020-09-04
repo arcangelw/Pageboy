@@ -362,6 +362,13 @@ open class PageboyViewController: UIViewController {
     public func pageIndex(of viewController: UIViewController) -> PageIndex? {
         return viewControllerIndexMap.index(for: viewController)
     }
+    
+    /// remove the page index of a view controller..
+    ///
+    /// - Parameter viewController: View controller.
+    public func remove(for viewController: UIViewController) {
+        viewControllerIndexMap.remove(for: viewController)
+    }
 }
 
 // MARK: - Paging Updates

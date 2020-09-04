@@ -31,6 +31,12 @@ internal final class IndexedObjectMap<T: AnyObject> {
         map[index] = wrapper
     }
     
+    func remove(for object: T) {
+        if let index = index(for: object) {
+            map[index] = nil
+        }
+    }
+    
     func removeAll() {
         map.removeAll()
     }
